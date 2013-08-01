@@ -16,6 +16,14 @@
 
 ## 使用
 
+### Installation
+
+```bash
+$ npm install leach
+```
+
+### Demo
+
 ```js
 var schema = {
   'hehe': {
@@ -31,3 +39,5 @@ var input = {
 var output = leach.leach(schema, input);
 ```
 
+## License
+The MIT license
