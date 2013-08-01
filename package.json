@@ -1,0 +1,36 @@
+{
+  "name": "leach",
+  "version": "0.0.1",
+  "description": "Leach value by validate schema",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test-all",
+    "blanket": {
+      "pattern": "lib/leach",
+      "data-cover-flags": {
+        "debug": false
+      }
+    },
+    "travis-cov": {
+      "threshold": 97
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gist.github.com/6131325.git"
+  },
+  "author": "Jackson Tian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gist.github.com/6131325"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "blanket": "*",
+    "travis-cov": "*"
+  }
+}
