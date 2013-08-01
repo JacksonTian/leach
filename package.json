@@ -8,29 +8,30 @@
   },
   "scripts": {
     "test": "make test-all",
-    "blanket": {
-      "pattern": "lib/leach",
-      "data-cover-flags": {
-        "debug": false
-      }
-    },
-    "travis-cov": {
-      "threshold": 97
-    }
+    "blanket": { "pattern": "leach/lib" },
+    "travis-cov": { "threshold": 100 }
   },
   "repository": {
     "type": "git",
-    "url": "https://gist.github.com/6131325.git"
+    "url": "https://github.com/JacksonTian/leach.git"
   },
   "author": "Jackson Tian",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gist.github.com/6131325"
-  },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
     "blanket": "*",
-    "travis-cov": "*"
+    "travis-cov": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "Leach",
+    "values"
+  ],
+  "bugs": {
+    "url": "https://github.com/JacksonTian/leach/issues"
   }
 }
