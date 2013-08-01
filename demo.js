@@ -21,7 +21,12 @@ var Validater = {
   }
 };
 
-var validate = function (scheme, input) {
+var getScheme = function () {
+  
+};
+
+var leach = function (scheme, input) {
+  scheme = getScheme(scheme);
   var ret = {};
   for (var key in input) {
     if (scheme.hasOwnProperty(key)) {
