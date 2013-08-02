@@ -1,4 +1,4 @@
-# leach [![Build Status](https://secure.travis-ci.org/JacksonTian/leach.png?branch=master)](http://travis-ci.org/JacksonTian/leach) [![Coverage Status](https://coveralls.io/repos/JacksonTian/leach/badge.png)](https://coveralls.io/r/JacksonTian/leach)
+# leach [![Build Status](https://secure.travis-ci.org/JacksonTian/png?branch=master)](http://travis-ci.org/JacksonTian/leach) [![Coverage Status](https://coveralls.io/repos/JacksonTian/leach/badge.png)](https://coveralls.io/r/JacksonTian/leach)
 
 ## 步骤：
 
@@ -36,7 +36,7 @@ var schema = {
 var input = {
   'hehe': '1000'
 };
-var output = leach.leach(schema, input);
+var output = leach(schema, input);
 ```
 
 ## License

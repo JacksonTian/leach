@@ -12,7 +12,7 @@ describe('leach', function () {
       'hehe': '1000',
       'nvshen': '23432'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({'hehe': 1000});
   });
 
@@ -25,7 +25,7 @@ describe('leach', function () {
     var input = {
       'hehe': 'invalid'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({});
   });
 
@@ -38,7 +38,7 @@ describe('leach', function () {
     var input = {
       'hehe': '0.123'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({hehe: 0.123});
   });
 
@@ -51,7 +51,7 @@ describe('leach', function () {
     var input = {
       'hehe': 'hehe.123'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({});
   });
 
@@ -67,12 +67,12 @@ describe('leach', function () {
     var input = {
       'hehe': '1000'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({});
     var input = {
       'hehe': '1'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({'hehe': 1});
   });
 
@@ -86,7 +86,7 @@ describe('leach', function () {
       'hehe': '1000'
     };
 
-    var output = leach.leach(schema, input, {
+    var output = leach(schema, input, {
       converter: {
         'custom': function (input) {
           return {value: input};
@@ -115,7 +115,7 @@ describe('leach', function () {
     };
 
     (function(){
-      leach.leach(schema, input);
+      leach(schema, input);
     }).should.throw('Convert for type custom is not exist');
   });
 
@@ -130,7 +130,7 @@ describe('leach', function () {
     };
 
     (function(){
-      leach.leach(schema, input, {
+      leach(schema, input, {
         converter: {
           custom: function (input) {
             return {value: input};
@@ -153,7 +153,7 @@ describe('leach', function () {
       'hehe': '1000',
       'nvshen': '23432'
     };
-    var output = leach.leach(schema, input);
+    var output = leach(schema, input);
     output.should.eql({'hehe': 1000, 'nvshen': 23432});
   });
 });
